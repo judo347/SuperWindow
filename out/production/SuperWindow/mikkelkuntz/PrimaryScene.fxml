@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="494.0" prefWidth="205.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mikkelkuntz.PrimarySceneController">
+  <children>
+    <Button id="buttonNewTemp" fx:id="buttonRL" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#openRL" prefHeight="24.0" prefWidth="88.5" text="RL" />
+    <Button id="buttonNewTemp" fx:id="buttonPoE" layoutX="102.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPoE" prefHeight="24.0" prefWidth="88.5" text="PoE" />
+    <Button id="buttonNewTemp" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="88.5" text="Button" />
+    <Button id="buttonNewTemp" layoutX="103.0" layoutY="38.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="88.5" text="Button" />
+    <Button id="buttonNewTemp" fx:id="buttonBatFolder" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="88.5" text="Bat Folder" />
+    <Button id="buttonNewTemp" layoutX="103.0" layoutY="62.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="88.5" text="Button" />
+    <Label layoutX="14.0" layoutY="448.0" text="Ping Router" />
+    <Label layoutX="125.0" layoutY="448.0" text="Ping Google" />
+    <Label fx:id="labelPingRouter" layoutX="14.0" layoutY="464.0" text="temp" />
+    <Label fx:id="labelPingGoogle" layoutX="125.0" layoutY="467.0" text="temp" />
+  </children>
+</AnchorPane>
