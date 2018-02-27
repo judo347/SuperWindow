@@ -1,5 +1,8 @@
 package mikkelkuntz;
 
+//https://stackoverflow.com/questions/20497845/constantly-update-ui-in-java-fx-worker-thread
+
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -41,6 +44,7 @@ public class PrimarySceneController {
         assert labelPingGoogle != null : "fx:id=\"labelPingGoogle\" was not injected: check your FXML file 'PrimaryScene.fxml'.";
         assert labelPingRouter != null : "fx:id=\"labelPingRouter\" was not injected: check your FXML file 'PrimaryScene.fxml'.";
 
+        pingRouter();
 
     }
 
@@ -76,12 +80,29 @@ public class PrimarySceneController {
     }
 
     @FXML
-    public void pingRouter(javafx.event.ActionEvent event){
+    public void pingRouter(){
         //TODO : Create
         //https://www.mkyong.com/java/how-to-execute-shell-command-from-java/
         //MAYBE ANTOHER SOURCE?
+
+        //System.out.println("This is pingRouter");
+
+        int i = 0;
+
+        while(true){
+            final int finalI = i;
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    labelPingRouter.setText("" + finalI);
+                }
+            });
+            i++;
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
-
-
-
 }
